@@ -17,3 +17,8 @@ app.use(resDataMiddleware);
 
 // 绑定端口号：8888
 app.listen(8080);
+
+const webSocketService = require('./service/web_socket_service')
+// 开启服务端的监听, 监听客户端的连接
+// 当某一个客户端连接成功之后, 就会对这个客户端进行message事件的监听说
+webSocketService.listen()
